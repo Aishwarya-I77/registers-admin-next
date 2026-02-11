@@ -136,7 +136,7 @@ const UserTable: React.FC<Props> = ({
   // Custom header style - Change the color here
   const headerStyle = {
     fontWeight: 600,
-    color: '#3559ab',
+    color: 'rgb(53, 89, 171)',
     background: '#f8fafc',
   };
 
@@ -288,12 +288,13 @@ const UserTable: React.FC<Props> = ({
 
       <Card
         style={{
-          padding: 0,
+          
           borderRadius: 12,
           border: '1px solid #eef2f7',
           boxShadow: '0 6px 18px rgba(15, 23, 42, 0.06)',
+           
         }}
-        // style={{ padding: 0 }}
+        styles={{ body: { padding: '16px 16px 2px 16px' } }}
       >
         <Table
           rowKey="id"

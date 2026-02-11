@@ -75,7 +75,7 @@ const Analytics: React.FC = () => {
   // Custom header style
   const headerStyle = {
     fontWeight: 600,
-    color: '#1677ff', // Change this to your desired color
+    color: 'rgb(53, 89, 171)', // Change this to your desired color
     
   };
 
@@ -93,12 +93,17 @@ const Analytics: React.FC = () => {
       />
 
       {/* Table */}
-      <Row style={{ marginTop: 24 }}>
+      <Row style={{ marginTop: 20 }}>
         <Col span={24}>
-          <Card>
+          <Card styles={{ body: { padding: '16px 16px 0px 16px' } }}>
             <Table
+             size="small"
               loading={loading}
               rowKey="userId"
+              bordered
+          rowClassName={(_, index) =>
+            index % 2 === 0 ? 'user-row-even' : 'user-row-odd'
+          }
               dataSource={userFormUsage.content}
               columns={[
                 {
@@ -126,6 +131,7 @@ const Analytics: React.FC = () => {
                 pageSize: userFormUsage.pageSize,
                 total: userFormUsage.totalElements,
                 onChange: handlePageChange,
+                style: { margin: '8px 8px' },
               }}
             />
           </Card>

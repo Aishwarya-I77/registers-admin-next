@@ -154,7 +154,7 @@ const Dashboard: React.FC = () => {
     <Title
       level={4}
       style={{
-        marginTop: -15,
+        marginTop: 0,
         marginBottom: 2,
         color: '#1e293b',
         
@@ -209,7 +209,7 @@ const Dashboard: React.FC = () => {
         hoverable
         loading={loading}
         style={{
-          height: 86,
+          height: 70,
           borderRadius: 12,
           border: 'none',
           boxShadow: '0 2px 4px rgba(0, 0, 0, 0.08)',
